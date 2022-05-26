@@ -1,0 +1,6 @@
+<app-loading *ngIf="spinner"></app-loading>
+<div *ngIf="!spinner" class="row">
+  <div *ngFor="let item of list" class="p-1 col-lg-4">
+    <app-card-usuario [juegos]="item"> </app-card-usuario>
+  </div>
+</div>

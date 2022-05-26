@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-xl{
+    background-color: rgb(179, 83, 15);
+    border-radius: 300px;
+    width: 200px;
+    color: white;
+
+}
+.btn-xl:hover{
+    background-color: transparent;
+    border-width: 2px;
+    border-color: rgb(179, 83, 15);
+    border-style:solid;
+}

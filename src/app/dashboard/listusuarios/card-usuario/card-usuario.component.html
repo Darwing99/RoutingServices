@@ -1,0 +1,30 @@
+<div class="card" style="width: 20rem">
+  <img class="card-img-top" [src]="imgUrl" alt="" />
+  <div class="card-body">
+    <h5 class="card-title text-center">
+      {{ name }}
+    </h5>
+    <p class="card-text">
+      <span><strong>Developer:</strong></span
+      ><span>{{ desarrollador }}</span>
+    </p>
+    <p class="card-text">
+        <span><strong>Genero:</strong></span
+        ><span>{{ genero }}</span>
+      </p>
+    <p class="card-text text-center">
+      {{ short_description }}
+    </p>
+    <div class="row">
+      <div class="col-lg-6">
+        <a [href]="urlJuego" class="btn btn-primary">Ir a juego</a>
+      </div>
+      <div class="col-lg-6">
+        <a routerLink="info/{{id}}" class="btn btn-primary">Ver mas</a>
+      </div>
+
+      
+    
+    </div>
+  </div>
+</div>

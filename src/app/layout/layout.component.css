@@ -1,0 +1,18 @@
+p{
+    font-family: 'montserrat', sans-serif;
+    font-size: 40px;
+    color: rgb(245 241 241);
+
+}
+hr{
+    border-color: rgb(179, 83, 15);
+    border-width: 3px;
+    color: rgb(179, 83, 15);
+    max-width: 65px;
+}
+.layout{
+    background: url('../../assets/img/img.jpg') no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+

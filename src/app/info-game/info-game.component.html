@@ -1,0 +1,112 @@
+<app-loading *ngIf="spinner"></app-loading>
+<div *ngIf="!spinner" class="container pt-5">
+
+  <h5 class="p-5 text-center card-title">
+    <strong> {{ title }}</strong>
+   </h5>
+  <div
+    id="carouselExampleControls"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div
+        id="{{ i }}"
+        *ngFor="let item of img; index as i"
+        [ngClass]="{ active: i === 0 }"
+        class="carousel-item"
+      >
+        <img [src]="item.image" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="row pt-5 pb-5">
+    <div class="col-lg-12">
+      <div class="row ">
+      
+        <p class="card-text">
+          {{ description }}
+        </p>
+      </div>
+      <div class="row mt-3">
+          <div class="col-lg-5">
+            <div class="col-md-12">
+                <img [src]="imgUrl" class="img-fluid rounded-start" alt="..." />
+              </div>
+          </div>
+        <div class="col-lg-3">
+         
+            <div class="row g-0">
+             
+              <div class="col-md-12">
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <Strong>genre</Strong> {{ genre }}
+                    </li>
+                    <li class="list-group-item">
+                      <Strong>platform</Strong> {{ platform }}
+                    </li>
+                    <li class="list-group-item">
+                      <Strong>developer</Strong> {{ developer }}
+                    </li>
+                    <li class="list-group-item">
+                      <Strong>publisher</Strong> {{ publisher }}
+                    </li>
+                    <li class="list-group-item">
+                      <Strong>release_date</Strong> {{ release_date }}
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+           
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="card-title text-center">
+            <strong>Minimum System Requirements</strong>
+          </h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><Strong>Os</Strong> {{ os }}</li>
+            <li class="list-group-item">
+              <Strong>Memory</Strong> {{ memory }}
+            </li>
+            <li class="list-group-item">
+              <Strong>graphics</Strong> {{ graphics }}
+            </li>
+            <li class="list-group-item">
+              <Strong>processor</Strong> {{ processor }}
+            </li>
+            <li class="list-group-item">
+              <Strong>storage</Strong> {{ storage }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card-body col-lg-12 ">
+        <a [href]="freetogame_profile_url" class="m-3 btn btn-success btn-block">Mas informacion</a>
+        <a [href]="game_url" class=" m-3 btn btn-success  btn-block">Jugar</a>
+      </div>
+    </div>
+  </div>
+</div>
